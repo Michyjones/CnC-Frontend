@@ -3,9 +3,9 @@
   align-items: center;
   background-image: linear-gradient(
     135deg,
-    rgb(83, 9, 112) 0%,
-    rgb(123, 38, 221) 69%,
-    rgb(203, 131, 231) 89%
+    rgb(110, 22, 145) 0%,
+    rgb(133, 36, 243) 69%,
+    rgb(183, 70, 228) 89%
   ) !important;
   height: 100vh;
 }

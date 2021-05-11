@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import breakpoints from "./breakpoints";
 import img from "../../assests/CnCLG.jpg";
+import thanks from "../../assests/Thanks.png";
 
 export const Container = styled.div`
   margin: 100px 50px;
@@ -162,4 +163,83 @@ export const ImageContainer = styled.image`
 `;
 export const ImageWrapper = styled.div`
   display: flex;
+`;
+
+export const MessageCard = styled.div`
+  padding: 200px 200px 500px 200px;
+  width: 724px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+`;
+
+export const MessageCardText = styled.div`
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  width: 660px;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 50px;
+`;
+
+export const PurpleButton = styled.div`
+  display: flex;
+  background: #bf00ff 0% 0% no-repeat padding-box;
+  letter-spacing: 0px;
+  color: #f9f9fb;
+  border-radius: 8px;
+  top: 225px;
+  width: 95px;
+  height: 52px;
+  margin: 10px 0 0 485px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const ButtonIcon = styled.div`
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-image: url(${thanks});
+  font-size: 50px;
+  color: #bf00ff;
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+`;
+export const Success = styled.div`
+  a {
+    text-decoration: none;
+    font: normal normal normal 17px/20px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+`;
+export const Href = styled.div`
+  padding: 20px;
+  width: 80%;
+  color: #c9c9c9;
+`;
+export const MessageText = styled.div`
+  text-align: left;
+  font: normal normal normal 20px/24px Montserrat;
+  letter-spacing: 0px;
+  color: #272727;
+  @media screen and (max-width: 1200px) {
+    font-size: 2.4rem;
+    margin: 40px 0;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 1.6rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 1rem;
+  }
 `;

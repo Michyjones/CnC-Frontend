@@ -22,7 +22,6 @@ import {
   ImageContainer,
   ImageWrapper,
 } from "./GetInTouch.styled";
-import NavBar from "../NavBar";
 import Footer from "../Footer";
 
 const GetInTouch = () => {
@@ -30,7 +29,6 @@ const GetInTouch = () => {
   const location = useLocation();
   return (
     <>
-      <NavBar />
       <Container>
         <Side>
           <ImageWrapper>

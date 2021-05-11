@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Grid, Search, Menu } from "semantic-ui-react";
 import Footer from "../Footer";
-import NavBar from "../NavBar";
+import RightNavBar from "../Nav/RightNavBar";
 import PaginationMessages from "./Pagenation";
 import {
   Header,
@@ -9,6 +9,7 @@ import {
   Details,
   DetailCard,
   GridWrapper,
+  Iframe,
 } from "./Message.styled";
 import { SearchBar, MenuCard, MenuItem } from "../home.sytled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,20 +25,21 @@ class Messages extends Component {
   render() {
     return (
       <>
-        <NavBar />
         <Container className="main">
           <Grid>
             <Grid.Column width={10}>
               <Header> LIVE STREAM | SUNDAY @10:00 AM EAT. </Header>
-              <iframe
-                title="Sunday Message."
-                width="670"
-                height="400"
-                src="https://www.youtube.com/embed/xSkKnIy77Jg"
-                frameBorder="0"
-                allowFullScreen
-                ng-show="showvideo"
-              ></iframe>
+              <Iframe>
+                <iframe
+                  title="Sunday Message."
+                  width="670"
+                  height="400"
+                  src="https://www.youtube.com/embed/xSkKnIy77Jg"
+                  frameBorder="0"
+                  allowFullScreen
+                  ng-show="showvideo"
+                ></iframe>
+              </Iframe>
               <SearchBar>
                 <Search />
               </SearchBar>

@@ -42,8 +42,16 @@ const ContactUs = () => {
     });
 
     setStatus("Submit");
-    const result = await response.json();
-    alert(result.status);
+    const responseMessage =
+      response.status === 200 ? (
+        <Redirect to="/feedback" />
+      ) : (
+        "Something went wrong"
+      );
+    setStatus([false, responseMessage]);
+    setInterval(() => {
+      setStatus([false, "Submit"]);
+    }, 3000);
   };
   return (
     <FormContainer onSubmit={handleSubmit}>
