@@ -43,7 +43,11 @@ const PrayerRequest = () => {
 
     setStatus("Submit");
     const responseMessage =
-      response.status === 200 ? <Redirect to="/" /> : "Something went wrong";
+      response.status === 200 ? (
+        <Redirect to="/feedback" />
+      ) : (
+        "Something went wrong"
+      );
     setStatus([false, responseMessage]);
     setInterval(() => {
       setStatus([false, "Submit"]);

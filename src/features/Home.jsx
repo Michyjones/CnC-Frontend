@@ -22,14 +22,12 @@ import {
   Space,
 } from "./home.sytled";
 
-import NavBar from "./NavBar";
 import Footer from "./Footer";
 
 class Home extends Component {
   render() {
     return (
       <>
-        <NavBar />
         <Container className="main">
           <Grid>
             <Body>
@@ -38,8 +36,7 @@ class Home extends Component {
                 alt="logo"
                 height={500}
                 width={1200}
-                className="transbox"
-                position="relative"
+                position="absolute"
               />
               <Text>
                 "DISCIPLING BELIEVERS FOR THE KINGDOM."

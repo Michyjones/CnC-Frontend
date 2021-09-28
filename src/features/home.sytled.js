@@ -6,7 +6,6 @@ export const Body = styled.div`
   font-size: 20px;
   border-radius: 8px;
   overflow: hidden;
-  margin-top: 10px;
 `;
 
 export const Text = styled.div`
@@ -53,6 +52,7 @@ export const Header = styled.div`
 export const ImageContainer = styled.image`
   background-image: url(${img});
   background-size: cover;
+  background-repeat: no-repeat;
   height: 500px;
   width: 500px;
 `;
