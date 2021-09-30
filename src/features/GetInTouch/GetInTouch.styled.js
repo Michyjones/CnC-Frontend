@@ -157,8 +157,8 @@ export const Button = styled.button`
 `;
 export const ImageContainer = styled.image`
   background-image: url(${img});
-  background-size: cover;
-  width: 660px;
+  background-size: 100% 100%;
+  width: 600px;
   height: 600px;
 `;
 export const ImageWrapper = styled.div`
