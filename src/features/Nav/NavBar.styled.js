@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import img from "../../assests/mountain.jpg";
+import styled from 'styled-components';
+import img from '../../assests/mountain.jpg';
 
 export const HamburgerMenu = styled.div`
   width: 2rem;
@@ -19,22 +19,22 @@ export const HamburgerMenu = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => (open ? "#ccc" : "#333")};
+    background-color: ${({ open }) => (open ? '#ccc' : '#333')};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
 
     &:nth-child(1) {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
     }
 
     &:nth-child(2) {
-      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      transform: ${({ open }) => (open ? 'translateX(100%)' : 'translateX(0)')};
       opacity: ${({ open }) => (open ? 0 : 1)};
     }
 
     &:nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 `;
@@ -63,35 +63,55 @@ export const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-
+  z-index: 2;
+  
   a {
     text-decoration: none;
     font: normal normal normal 17px/20px Montserrat;
     letter-spacing: 0px;
     color: white;
+    display: inline-block;
+    padding 1rem;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      #fff 50%);
+    
+    background-size: 240%;
+    transition: all 0.4s;
+    &: hover,
+    &: active{
+   background-position: 100%;
+   color: black;
+   transform:translateX(1rem);
+    }
   }
 
   li {
-    padding: 0 20px 20px;
+    padding: 0 20px 10px;
     font: normal normal normal 15px/15px Montserrat;
+   
   }
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #000000;
+    background-color: purple;
     color: #000000;
     line-height: 3rem;
-
+    visibility: visible;
+    
     position: absolute;
 
     position: fixed;
-    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
     top: 0;
     right: 0;
-    height: 70vh;
-    width: 300px;
+    height: 70%;
+    width: ${({ open }) => (open ? '50%' : '0')};
     padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
+    opacity: ${({ open }) => (open ? '1' : '0')};
+    transition: width 0.8s, opacity 0.8s;
 
     li {
       color: #bf00ff;
