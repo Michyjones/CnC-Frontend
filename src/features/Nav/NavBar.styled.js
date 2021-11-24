@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import img from '../../assests/mountain.jpg';
 
 export const HamburgerMenu = styled.div`
   width: 2rem;
@@ -7,8 +6,8 @@ export const HamburgerMenu = styled.div`
   position: fixed;
   top: 15px;
   right: 20px;
-  z-index: 20;
   display: none;
+  z-index: 1000;
 
   @media (max-width: 768px) {
     display: flex;
@@ -19,22 +18,23 @@ export const HamburgerMenu = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => (open ? '#ccc' : '#333')};
+    background-color: ${({ click }) => (click ? '#ccc' : '#333')};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
 
     &:nth-child(1) {
-      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+      transform: ${({ click }) => (click ? 'rotate(45deg)' : 'rotate(0)')};
     }
 
     &:nth-child(2) {
-      transform: ${({ open }) => (open ? 'translateX(100%)' : 'translateX(0)')};
-      opacity: ${({ open }) => (open ? 0 : 1)};
+      transform: ${({ click }) =>
+        click ? 'translateX(100%)' : 'translateX(0)'};
+      opacity: ${({ click }) => (click ? 0 : 1)};
     }
 
     &:nth-child(3) {
-      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+      transform: ${({ click }) => (click ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 `;
@@ -43,7 +43,7 @@ export const Nav = styled.nav`
   width: 100%;
   height: 60px;
   border-bottom: 2px solid #f1f1f1;
-  padding: 20px o 20px;
+  padding: 0px 40px 40px;
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -56,6 +56,7 @@ export const Nav = styled.nav`
   font: normal normal normal 20px/20px Montserrat;
   color: white;
   margin-bottom: -70px;
+  z-index: 600;
 `;
 
 export const Ul = styled.ul`
@@ -63,8 +64,6 @@ export const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  z-index: 2;
-  
   a {
     text-decoration: none;
     font: normal normal normal 17px/20px Montserrat;
@@ -100,17 +99,14 @@ export const Ul = styled.ul`
     color: #000000;
     line-height: 3rem;
     visibility: visible;
-    
-    position: absolute;
-
     position: fixed;
-    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+   
     top: 0;
     right: 0;
     height: 70%;
-    width: ${({ open }) => (open ? '50%' : '0')};
+    width: ${({ click }) => (click ? '50%' : '0')};
     padding-top: 3.5rem;
-    opacity: ${({ open }) => (open ? '1' : '0')};
+    opacity: ${({ click }) => (click ? '1' : '0')};
     transition: width 0.8s, opacity 0.8s;
 
     li {
@@ -119,6 +115,4 @@ export const Ul = styled.ul`
   }
 `;
 
-export const Overlay = styled.div`
-  visibility: visible;
-`;
+export const Overlay = styled.div``;
