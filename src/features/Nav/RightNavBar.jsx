@@ -2,25 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from 'semantic-ui-react';
 import { Ul, Overlay } from './NavBar.styled';
-import { useState } from 'react';
 
-const RightNavBar = () => {
-  const [open, setOpen] = useState(false);
+const RightNavBar = ({ click, handleClick }) => {
 
   return (
     <>
       <div>
         <Overlay>
-          <Ul open={open} onClick={() => setOpen(!open)}>
+          <Ul click={click}>
             <li>
-              <Link to="/">
+              <Link onClick={handleClick} to="/">
                 <Icon name="home" />
                 Home
               </Link>
             </li>
             <li>
               <Link to="/about">
-                <Icon name="info" />
+                <Icon name="info" onClick={handleClick} />
                 About Us
               </Link>
             </li>
