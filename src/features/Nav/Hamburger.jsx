@@ -1,18 +1,19 @@
-import React, { useState } from "react";
-import { HamburgerMenu } from "./NavBar.styled.js";
-import RightNavBar from "./RightNavBar";
+import React, { useState } from 'react';
+import { HamburgerMenu } from './NavBar.styled.js';
+import RightNavBar from './RightNavBar';
 
 const Hamburger = () => {
-  const [open, setOpen] = useState(false);
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
   return (
     <>
-      <HamburgerMenu open={open} onClick={() => setOpen(!open)}>
+      <HamburgerMenu click={click} onClick={handleClick}>
         <div />
         <div />
         <div />
       </HamburgerMenu>
-      <RightNavBar open={open} />
+      <RightNavBar click={click} onClick={handleClick}/>
     </>
   );
 };
