@@ -1,14 +1,14 @@
-import React, { lazy } from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { lazy } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-const Home = lazy(() => import("../../features/Home"));
+const Home = lazy(() => import('../../features/Home'));
 const GetInTouch = lazy(() =>
-  import("../../features/GetInTouch/GettingInTouch")
+  import('../../features/GetInTouch/GettingInTouch')
 );
 const FeedbackCard = lazy(() =>
-  import("../../features/GetInTouch/FeedbackCard")
+  import('../../features/GetInTouch/FeedbackCard')
 );
-const Messages = lazy(() => import("../../features/Messages/Messages"));
+const Messages = lazy(() => import('../../features/Messages/Messages'));
 
 const pageConnect = () => {
   return (
