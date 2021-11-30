@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Container, Grid, Search, Menu } from "semantic-ui-react";
-import Footer from "../Footer";
-import RightNavBar from "../Nav/RightNavBar";
-import PaginationMessages from "./Pagenation";
+import React, { Component } from 'react';
+import { Container, Grid, Search, Menu } from 'semantic-ui-react';
+import Footer from '../Footer';
+import RightNavBar from '../Nav/RightNavBar';
+import PaginationMessages from './Pagenation';
 import {
   Header,
   Wrapper,
@@ -10,16 +10,16 @@ import {
   DetailCard,
   GridWrapper,
   Iframe,
-} from "./Message.styled";
-import { SearchBar, MenuCard, MenuItem } from "../home.sytled";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from './Message.styled';
+import { SearchBar, MenuCard, MenuItem } from '../home.sytled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faVideo,
   faAudioDescription,
   faFilePdf,
   faFileWord,
   faCalendar,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
 class Messages extends Component {
   render() {
@@ -28,17 +28,18 @@ class Messages extends Component {
         <Container className="main">
           <Grid>
             <Grid.Column width={10}>
-              <Header> LIVE STREAM | SUNDAY @10:00 AM EAT. </Header>
+              <Header> JOIN US ON SUNDAY @10:00 AM EAT. </Header>
               <Iframe>
-                <iframe
-                  title="Sunday Message."
-                  width="670"
-                  height="400"
-                  src="https://www.youtube.com/embed/xSkKnIy77Jg"
-                  frameBorder="0"
-                  allowFullScreen
-                  ng-show="showvideo"
-                ></iframe>
+              <iframe
+                width="670"
+                height="400"
+                src="https://www.youtube.com/embed/930KYTObJto"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                ng-show="showvideo"
+              ></iframe>
               </Iframe>
               <SearchBar>
                 <Search />
