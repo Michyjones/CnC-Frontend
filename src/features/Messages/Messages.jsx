@@ -30,16 +30,16 @@ class Messages extends Component {
             <Grid.Column width={10}>
               <Header> JOIN US ON SUNDAY @10:00 AM EAT. </Header>
               <Iframe>
-              <iframe
-                width="670"
-                height="400"
-                src="https://www.youtube.com/embed/930KYTObJto"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                ng-show="showvideo"
-              ></iframe>
+                <iframe
+                  width="670"
+                  height="400"
+                  src="https://www.youtube.com/embed/live_stream?channel=UCmDajfl4tCiKq7oiF-6fHog&autoplay=1"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  ng-show="showvideo"
+                ></iframe>
               </Iframe>
               <SearchBar>
                 <Search />
