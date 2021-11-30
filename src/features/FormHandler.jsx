@@ -8,19 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import {
-    Body,
-    Header,
-    Dets,
-    Details,
-    DetailCard,
-    Wrapper,
-    MenuCard,
-    MenuItem,
-    SearchBar,
-    Text,
-    Space,
-  } from './home.sytled';
+import { MenuCard, MenuItem } from './home.sytled';
 
 const intialState = {
   weeklySermon: '',

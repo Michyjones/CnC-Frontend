@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
   Container,
   Grid,
@@ -29,29 +30,27 @@ import {
   Text,
   Space,
 } from './home.sytled';
-
 import Footer from './Footer';
 import FormHandler from './FormHandler';
 import EventList from './EventList';
+import {
+  createEvent,
+  updateEvent,
+  deleteEvent,
+} from '../features/eventActions';
 
-const eventsDashboard = [
-  {
-    id: '1',
-    weeklySermon: 'Study Of The Scripures',
-    title: 'Study Of The Scripures Part 5',
-    date: '2018-03-27',
-    series: 'Study Of The Scripures ',
-    sermonBy: 'Pastor Maina',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin ligula eu leo tincidunt, quis scelerisque magna dapibus. Sed eget ipsum vel arcu vehicula ullamcorper.',
-    audio: 'Holy are you Lord',
-    video: 'Video link',
-  },
-];
+const mapState = (state) => ({
+  events: state.events,
+});
+
+const actions = {
+  createEvent,
+  updateEvent,
+  deleteEvent,
+};
 
 class Home extends Component {
   state = {
-    events: eventsDashboard,
     isOpen: false,
     selected: null,
   };
@@ -73,32 +72,25 @@ class Home extends Component {
     });
   };
   handleUpdate = (updatedEvent) => {
+    this.props.updateEvent(updatedEvent);
     this.setState({
-      events: this.state.events.map((event) => {
-        if (event.id === updatedEvent.id) {
-          return Object.assign({}, updatedEvent);
-        } else return event;
-      }),
       isOpen: false,
       selected: null,
     });
   };
   createNewEvent = (newEvent) => {
     newEvent.id = cuid();
-    const updatedEvents = [...this.state.events, newEvent];
+    this.props.createEvent(newEvent);
     this.setState({
-      events: updatedEvents,
       isOpen: false,
     });
   };
   handleDelete = (eventId) => () => {
-    const updatedEvents = this.state.events.filter((e) => e.id !== eventId);
-    this.setState({
-      events: updatedEvents,
-    });
+    this.props.deleteEvent(eventId);
   };
   render() {
     const { selected } = this.state;
+    const { events } = this.props;
     return (
       <>
         <Container className="main">
@@ -142,16 +134,17 @@ class Home extends Component {
               <SearchBar>
                 <Search />
               </SearchBar>
-              <EventList
-                events={this.state.events}
-                onOpen={this.handleOpen}
-                deleteEvent={this.handleDelete}
-              />
               <Button
                 onClick={this.handleFormOpen}
                 color="purple"
                 content="Upload New Message"
               />
+              <EventList
+                events={events}
+                onOpen={this.handleOpen}
+                deleteEvent={this.handleDelete}
+              />
+
               {this.state.isOpen && (
                 <FormHandler
                   updateEvent={this.handleUpdate}
@@ -218,4 +211,4 @@ class Home extends Component {
     );
   }
 }
-export default Home;
+export default connect(mapState, actions)(Home);
