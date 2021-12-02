@@ -68,10 +68,8 @@ export default class Footer extends Component {
                   content="The Cross and Crowns Ministry"
                 />
                 <Text>
-                  <p>
                     Discipling belivers for the Kingdom. <br />
                     Matthew 28:19.
-                  </p>
                 </Text>
               </Grid.Column>
             </Grid>
