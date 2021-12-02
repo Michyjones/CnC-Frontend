@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Grid, Search, Menu } from 'semantic-ui-react';
 import Footer from '../Footer';
-import RightNavBar from '../Nav/RightNavBar';
 import PaginationMessages from './Pagenation';
 import {
   Header,
@@ -35,9 +34,9 @@ class Messages extends Component {
                   height="400"
                   src="https://www.youtube.com/embed/live_stream?channel=UCmDajfl4tCiKq7oiF-6fHog&autoplay=1"
                   title="YouTube video player"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                   ng-show="showvideo"
                 ></iframe>
               </Iframe>
@@ -52,10 +51,6 @@ class Messages extends Component {
                   <FontAwesomeIcon icon={faCalendar} />
                   &nbsp;Date: Sunday 20th April, 2021.
                 </DetailCard>
-                <p>
-                  Welcome
-                  <p></p>
-                </p>
                 <MenuCard>
                   <Menu>
                     <Menu.Item>
@@ -90,10 +85,6 @@ class Messages extends Component {
                   <FontAwesomeIcon icon={faCalendar} />
                   &nbsp;Date: Sunday 20th April, 2021.
                 </DetailCard>
-                <p>
-                  Welcome
-                  <p></p>
-                </p>
                 <MenuCard>
                   <Menu>
                     <Menu.Item>
@@ -128,10 +119,6 @@ class Messages extends Component {
                   <FontAwesomeIcon icon={faCalendar} />
                   &nbsp;Date: Sunday 20th April, 2021.
                 </DetailCard>
-                <p>
-                  Welcome
-                  <p></p>
-                </p>
                 <MenuCard>
                   <Menu>
                     <Menu.Item>
@@ -166,10 +153,6 @@ class Messages extends Component {
                   <FontAwesomeIcon icon={faCalendar} />
                   &nbsp;Date: Sunday 20th April, 2021.
                 </DetailCard>
-                <p>
-                  Welcome
-                  <p></p>
-                </p>
                 <MenuCard>
                   <Menu>
                     <Menu.Item>
@@ -204,10 +187,6 @@ class Messages extends Component {
                   <FontAwesomeIcon icon={faCalendar} />
                   &nbsp;Date: Sunday 20th April, 2021.
                 </DetailCard>
-                <p>
-                  Welcome
-                  <p></p>
-                </p>
                 <MenuCard>
                   <Menu>
                     <Menu.Item>

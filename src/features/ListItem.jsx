@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Segment, Item, Icon, Button, Header } from 'semantic-ui-react';
+import { Segment, Item, Icon, Button } from 'semantic-ui-react';
 
 class EventListItem extends Component {
   render() {
@@ -12,9 +12,7 @@ class EventListItem extends Component {
               <Item.Content>
                 <Item.Header>{event.weeklySermon} </Item.Header>
                 <Item.Header>{event.title}</Item.Header>
-                <Item.Description>
-                  Sermon By <a>{event.sermonBy}</a>
-                </Item.Description>
+                <Item.Description>Sermon By {event.sermonBy}</Item.Description>
               </Item.Content>
             </Item>
           </Item.Group>
@@ -34,14 +32,12 @@ class EventListItem extends Component {
 
           <Button
             onClick={deleteEvent(event.id)}
-            as="a"
             color="red"
             floated="right"
             content="Delete"
           />
           <Button
             onClick={onOpen(event)}
-            as="a"
             color="teal"
             floated="right"
             content="Edit"
