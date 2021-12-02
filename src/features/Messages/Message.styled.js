@@ -58,14 +58,14 @@ export const Iframe = styled.div`
     font-size: 2.4rem;
     margin: 0px 0;
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     font-size: 1.6rem;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     font-size: 1rem;
     margin: 20px 0;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 550px) {
     font-size: 1rem;
   }
 `;

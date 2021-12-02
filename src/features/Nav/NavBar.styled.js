@@ -41,9 +41,8 @@ export const HamburgerMenu = styled.div`
 
 export const Nav = styled.nav`
   width: 100%;
-  height: 60px;
+  height: 6rem;
   border-bottom: 2px solid #f1f1f1;
-  padding: 0px 40px 40px;
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -77,7 +76,7 @@ export const Ul = styled.ul`
       transparent 50%,
       #fff 50%);
     
-    background-size: 240%;
+    background-size: 275%;
     transition: all 0.4s;
     &: hover,
     &: active{
@@ -115,4 +114,5 @@ export const Ul = styled.ul`
   }
 `;
 
-export const Overlay = styled.div``;
+export const LeftNav = styled.div`
+margin-top: 2rem`;

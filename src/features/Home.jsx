@@ -54,9 +54,9 @@ class Home extends Component {
     isOpen: false,
     selected: null,
   };
-  handleFormOpen = () => {
+  handleFormOpen = (open) => {
     this.setState({
-      selected: null,
+      selected: open,
       isOpen: true,
     });
   };
