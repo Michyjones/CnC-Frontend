@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import breakpoints from "../GetInTouch/breakpoints";
+import styled from 'styled-components';
+import breakpoints from '../GetInTouch/breakpoints';
 
 export const Video = styled.iframe`
   display: flex;
@@ -7,7 +7,6 @@ export const Video = styled.iframe`
   justify-content: left;
   height: 500px;
   width: 650px;
-  src: "https://www.youtube.com/embed/xSkKnIy77Jg";
 `;
 
 export const Header = styled.div`
@@ -47,7 +46,7 @@ export const GridWrapper = styled.div`
   display: flex;
   flex: 1;
   padding-top: 20px;
-  ${breakpoints("display", [{ 768: "none" }])};
+  ${breakpoints('display', [{ 768: 'none' }])};
 `;
 
 export const Iframe = styled.div`
@@ -69,3 +68,50 @@ export const Iframe = styled.div`
     font-size: 1rem;
   }
 `;
+
+export const Youtube = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 2.4rem;
+    margin: 0px 0;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 1.6rem;
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 1rem;
+  }
+`;
+
+export const FrameMargin = styled.div`
+  padding-top: 30px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  @media screen and (max-width: 1200px) {
+    font-size: 2.4rem;
+    margin: 0px 0;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 1.6rem;
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 1rem;
+  }
+x`;
+
+export const FramePadding = styled.div`
+  padding-top: 10px;
+  padding-bottom: 10px;
+x`;

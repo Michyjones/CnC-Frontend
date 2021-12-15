@@ -165,17 +165,21 @@ class Home extends Component {
                   &nbsp;Date: Sunday 20th April, 2021.
                 </DetailCard>
                 <p>
-                  Welcome to Cornerstone Christian Fellowship in Jacksonville,
-                  Florida. Our aim is to teach and study the Word of God,
-                  precept upon precept, line upon line, here a little and there
-                  a little; comparing spiritual things with spiritual, beginning
-                  at Moses, so that every Christian may be complete and
-                  thoroughly prepared for every good work in anticipation of
-                  Christ’s Judgment Seat. Please look at our website, listen to
-                  a sermon or two and ask God if this is the place He would have
-                  you come to grow in the Word. We would love to have you visit
-                  anytime.
-                  <p></p>
+                  i. We had earlier noted that the word “equipping” in Eph 4:16
+                  comes from a root word (a medical term) that carries the
+                  thought of setting of a bone, so as to be perfectly joined
+                  together. This equipping is necessary so that the body of
+                  Christ is healthy and functions as the builder designed it. a.
+                  Paul complements this thought as he uses two body
+                  anatomy/medical terms (joints and ligaments) in a comparable
+                  verse found in - Col 2:19 and not holding fast to the Head,
+                  from whom all the body, nourished and knit together by joints
+                  and ligaments, grows with the increase that is from God. This
+                  growing of the body with ‘increase that is from God’ is a
+                  quality term and not a quantity one. This is demonstrated as
+                  individual believers in the body of Christ who avail
+                  themselves to be taught, progressively mature and consciously
+                  supply to the other believers to whom they are joined.
                 </p>
                 <MenuCard>
                   <Menu>
