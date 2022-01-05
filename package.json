@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.7.0",
     "cuid": "^2.1.8",
+    "lodash.debounce": "^4.0.8",
     "node-sass": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -20,12 +21,14 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-spinners": "^0.10.6",
+    "react-timestamp": "^5.1.0",
     "redux": "^4.1.2",
     "sass-loader": "^10.1.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
     "styled-components": "^5.2.3",
     "web-vitals": "^1.1.1",
+    "youtube-api-search": "0.0.5",
     "yup": "^0.32.9"
   },
   "scripts": {
