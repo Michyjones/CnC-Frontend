@@ -46,13 +46,13 @@ export const GridWrapper = styled.div`
   display: flex;
   flex: 1;
   padding-top: 20px;
-  ${breakpoints('display', [{ 768: 'none' }])};
 `;
 
 export const Iframe = styled.div`
   display: flex;
   flex: 1;
   padding-top: 20px;
+  padding-bottom: 20px;
   @media screen and (max-width: 1200px) {
     font-size: 2.4rem;
     margin: 0px 0;
