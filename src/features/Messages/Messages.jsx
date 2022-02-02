@@ -9,9 +9,6 @@ import Footer from '../Footer';
 import PaginationMessages from './Pagenation';
 import {
   Header,
-  Wrapper,
-  Details,
-  DetailCard,
   GridWrapper,
   Iframe,
   FrameMargin,

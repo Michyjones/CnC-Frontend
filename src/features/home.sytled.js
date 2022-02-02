@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import img from "../assests/mountain.jpg";
-import breakpoints from "./GetInTouch/breakpoints";
+import styled from 'styled-components';
+import img from '../assests/mountain.jpg';
+import breakpoints from './GetInTouch/breakpoints';
 
 export const Body = styled.div`
   font-size: 20px;
@@ -101,7 +101,7 @@ export const MenuItem = styled.div`
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   cursor: pointer;
-  ${breakpoints("display", [{ 500: "none" }])};
+  ${breakpoints('display', [{ 500: 'none' }])};
   &:hover {
     color: #bf00ff;
     padding-left: 3em;
@@ -112,11 +112,32 @@ export const MenuItem = styled.div`
   }
 `;
 
-export const SearchBar = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  overflow: hidden;
-  &::-ms-input-placeholder {
-    width: 1000%;
+export const SearchBars = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  color: purple;
+  border: 1px solid;
+  border-radius: 5px;
+  font: normal normal normal 20px/20px Montserrat;
+  &:hover {
+    box-shadow: 1px 1px 1px thistle;
+  }
+`;
+
+export const TextInput = styled.input`
+  flex: 1 0;
+  min-width: 50px;
+  min-height: 25px;
+  font-size: inherit;
+  background-color: transparent;
+  padding-left: 5px;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+  ::placeholder {
+    color: #bf00ff;
   }
 `;
