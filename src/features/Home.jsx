@@ -5,7 +5,6 @@ import {
   Grid,
   Image,
   Menu,
-  Search,
   Button,
 } from 'semantic-ui-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,7 +25,6 @@ import {
   Wrapper,
   MenuCard,
   MenuItem,
-  SearchBar,
   Text,
   Space,
 } from './home.sytled';
@@ -131,9 +129,6 @@ class Home extends Component {
               </p>
             </Grid.Column>
             <Grid.Column width={8}>
-              <SearchBar>
-                <Search />
-              </SearchBar>
               <Button
                 onClick={this.handleFormOpen}
                 color="purple"
