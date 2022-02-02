@@ -7,7 +7,6 @@ const VideoDetail = ({ video }) => {
   if (!video) {
     return (
       <div className="block">
-        {/*<span className="loader"></span>*/}
         <h4 className="title is-2 is-unselectable is-centered">
           Loading
           <span className="dot">.</span>

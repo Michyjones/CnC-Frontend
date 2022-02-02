@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import breakpoints from '../GetInTouch/breakpoints';
 
 export const Video = styled.iframe`
   display: flex;
@@ -115,3 +114,7 @@ export const FramePadding = styled.div`
   padding-top: 10px;
   padding-bottom: 10px;
 x`;
+
+export const VideoFrame = styled.div`
+  padding: 2rem;
+`;
