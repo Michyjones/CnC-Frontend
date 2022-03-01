@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Container } from "semantic-ui-react";
-import Footer from "../Footer";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Container } from 'semantic-ui-react';
+import Footer from '../Footer';
 
 import {
   MessageCard,
@@ -11,7 +11,7 @@ import {
   ButtonIcon,
   Success,
   Href,
-} from "./GetInTouch.styled";
+} from './GetInTouch.styled';
 
 const FeedbackCard = () => {
   return (
@@ -27,7 +27,7 @@ const FeedbackCard = () => {
               </Href>
             </MessageText>
             <Success>
-              <Link to={"/"}>
+              <Link to={'/'}>
                 <PurpleButton type="submit">Done</PurpleButton>
               </Link>
             </Success>
