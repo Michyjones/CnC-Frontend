@@ -183,6 +183,20 @@ export const MessageCardText = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 0 0 50px;
+  @media screen and (max-width: 1200px) {
+    font-size: 2.4rem;
+    margin: 40px 0;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 1.6rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 1rem;
+  }
 `;
 
 export const PurpleButton = styled.div`
