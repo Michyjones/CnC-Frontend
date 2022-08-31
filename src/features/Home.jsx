@@ -27,6 +27,7 @@ import {
   MenuItem,
   Text,
   Space,
+  UploadButton
 } from './home.sytled';
 import Footer from './Footer';
 import FormHandler from './FormHandler';
@@ -129,11 +130,7 @@ class Home extends Component {
               </p>
             </Grid.Column>
             <Grid.Column width={8}>
-              <Button
-                onClick={this.handleFormOpen}
-                color="purple"
-                content="Upload New Message"
-              />
+             
               <EventList
                 events={events}
                 onOpen={this.handleOpen}
@@ -148,7 +145,15 @@ class Home extends Component {
                   handleCancel={this.handleCancel}
                 />
               )}
+              <UploadButton>
+                <Button
+                onClick={this.handleFormOpen}
+                color="purple"
+                content="Upload New Message"
+              />
+              </UploadButton>
             </Grid.Column>
+          
             <Grid.Column width={8}>
               <Wrapper>
                 <Dets> This Sunday Sermon</Dets>
