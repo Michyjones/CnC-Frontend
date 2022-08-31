@@ -10,6 +10,8 @@ const FeedbackCard = lazy(() =>
 );
 const Messages = lazy(() => import('../../features/Messages/Messages'));
 
+const AboutUs = lazy(() => import('../../features/About/AboutUs'));
+
 const pageConnect = () => {
   return (
     <Switch>
@@ -21,6 +23,9 @@ const pageConnect = () => {
       </Route>
       <Route path="/messages">
         <Messages />
+      </Route>
+      <Route exact path="/about">
+        <AboutUs />
       </Route>
       <Route exact path="/feedback">
         <FeedbackCard />
