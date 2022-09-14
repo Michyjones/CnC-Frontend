@@ -70,13 +70,8 @@ class Messages extends Component {
             <Grid.Column width={10}>
               <Header> JOIN US ON SUNDAY @10:00 AM EAT. </Header>
               <Iframe>
-              <iframe src="https://player.castr.com/live_5be635100cb911edab382fabf9b634e2" width="90%" height= "400px;" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+              <iframe width="720" height="800" src="https://boxcast.tv/view-embed/pb2rdw9qcmt79wcnjp7a?showTitle=1&showDescription=1&showHighlights=1&showRelated=1&defaultVideo=next&market=house-of-worship&showDocuments=1&showIndex=1&showDonations=0&showChat=1&layout=playlist-to-right" frameBorder="0" scrolling="auto" allowfullscreen="true" allow="autoplay; fullscreen"></iframe>
               </Iframe>
-              <Iframe>
-              <iframe src="https://player.castr.com/live_5be635100cb911edab382fabf9b634e2?range=1658825247-2072&abr=false&namedHls=true" frameborder="0" width="590" height="430" allow="autoplay"  scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-
-               </Iframe>
-
               <Button
                 onClick={this.clicked}
                 color="purple"
