@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Icon } from 'semantic-ui-react';
 import { Ul } from './NavBar.styled';
 
-const RightNavBar = ({ click}) => {
+const RightNavBar = ({click}) => {
   return (
     <>
       <div>

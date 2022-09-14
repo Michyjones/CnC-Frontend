@@ -34,7 +34,7 @@ const ContactUs = () => {
       message: message.value,
     };
     {}
-    const response = await fetch("http://localhost:5000/contact", {
+    const response = await fetch("http://localhost:5004/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
