@@ -141,3 +141,7 @@ export const TextInput = styled.input`
     color: #bf00ff;
   }
 `;
+export const UploadButton= styled.div`
+flex: 1 0;
+padding-top: 40px;
+padding-left: 369px;`;
