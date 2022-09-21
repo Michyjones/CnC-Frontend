@@ -33,7 +33,6 @@ const ContactUs = () => {
       email: email.value,
       message: message.value,
     };
-    {}
     const response = await fetch("http://localhost:5004/contact", {
       method: "POST",
       headers: {
