@@ -14,8 +14,8 @@ import {
   FrameMargin,
   FramePadding,
 } from './Message.styled';
-const channelId = 'UCmDajfl4tCiKq7oiF-6fHog';
-const API_KEY = 'AIzaSyBv-MuoxYFhoWlAr4wwi_6s3NYgRpTnDU8';
+const channelId = process.env.REACT_APP_CHANNEL_ID;
+const API_KEY = process.env.REACT_APP_API_KEY;
 const result = 10;
 
 const googleUrl = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${result}`;
