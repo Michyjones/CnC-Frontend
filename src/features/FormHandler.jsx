@@ -1,26 +1,17 @@
-import React, { Component } from 'react';
-import { Segment, Form, Button, Menu } from 'semantic-ui-react';
-import {
-  faVideo,
-  faAudioDescription,
-  faFilePdf,
-  faFileWord,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import { MenuCard, MenuItem } from './home.sytled';
+import React, { Component } from "react";
+import { Segment, Form, Button, Menu } from "semantic-ui-react";
 
 const intialState = {
-  weeklySermon: '',
-  title: '',
-  sermonBy: '',
-  date: '',
-  series: '',
-  description: '',
-  video: '',
-  audio: '',
-  pdf: '',
-  word: '',
+  weeklySermon: "",
+  title: "",
+  sermonBy: "",
+  date: "",
+  series: "",
+  description: "",
+  video: "",
+  audio: "",
+  notes: "",
+
 };
 
 class FormHandler extends Component {
@@ -60,120 +51,91 @@ class FormHandler extends Component {
     const { handleCancel } = this.props;
     const { event } = this.state;
     return (
-      <div>
-        <Segment>
-          <Form onSubmit={this.onSubmit}>
-            <Form.Field>
-              <label>This Sunday Sermon</label>
-              <input
-                name="weeklySermon"
-                onChange={this.onInputChange}
-                value={event.weeklySermon}
-                placeholder="Weekly Sermon"
-              />
-            </Form.Field>
-            <Form.Field>
-              <label>Sermon Title</label>
-              <input
-                name="title"
-                onChange={this.onInputChange}
-                value={event.title}
-                placeholder="Sermon Title"
-              />
-            </Form.Field>
-            <Form.Field>
-              <label>Sermon By</label>
-              <input
-                name="sermonBy"
-                onChange={this.onInputChange}
-                value={event.sermonBy}
-                placeholder="Pastor/Preacher Name"
-              />
-            </Form.Field>
-            <Form.Field>
-              <label>Date</label>
-              <input
-                name="date"
-                type="date"
-                onChange={this.onInputChange}
-                value={event.date}
-                placeholder="Select the date"
-              />
-            </Form.Field>
-            <Form.Field>
-              <label>Series</label>
-              <input
-                name="series"
-                onChange={this.onInputChange}
-                value={event.series}
-                placeholder="Sermon series"
-              />
-            </Form.Field>
-            <Form.Field>
-              <label>Description</label>
-              <textarea
-                name="description"
-                onChange={this.onInputChange}
-                value={event.description}
-                placeholder="Decription of the Message"
-              />
-            </Form.Field>
-            <Form.Field>
-              <label>Video Upload</label>
-              <input
-                name="video"
-                onChange={this.onInputChange}
-                value={event.video}
-                placeholder="Upload Video"
-              />
-            </Form.Field>
-            <Form.Field>
-              <label>Upload Audio</label>
-              <input
-                name="audio"
-                onChange={this.onInputChange}
-                value={event.audio}
-                placeholder="Upload audio"
-              />
-              <MenuCard>
-                <Menu>
-                  <Menu.Item>
-                    <MenuItem
-                      name="audio"
-                      onChange={this.onInputChange}
-                      value={event.audio}
-                      placeholder="Upload audio"
-                    >
-                      <FontAwesomeIcon icon={faVideo} /> &nbsp;Video
-                    </MenuItem>
-                  </Menu.Item>
-                  <Menu.Item>
-                    <MenuItem>
-                      <FontAwesomeIcon icon={faAudioDescription} /> &nbsp; Audio
-                    </MenuItem>
-                  </Menu.Item>
-                  <Menu.Item>
-                    <MenuItem>
-                      <FontAwesomeIcon icon={faFilePdf} /> &nbsp; PDF
-                    </MenuItem>
-                  </Menu.Item>
-                  <Menu.Item>
-                    <MenuItem>
-                      <FontAwesomeIcon icon={faFileWord} /> &nbsp;Word
-                    </MenuItem>
-                  </Menu.Item>
-                </Menu>
-              </MenuCard>
-            </Form.Field>
-            <Button primary type="submit">
-              Submit
-            </Button>
-            <Button onClick={handleCancel} type="button">
-              Cancel
-            </Button>
-          </Form>
-        </Segment>
-      </div>
+      <Segment>
+        <Form onSubmit={this.onSubmit}>
+          <Form.Field>
+            <label>This Sunday Sermon</label>
+            <input
+              name="weeklySermon"
+              onChange={this.onInputChange}
+              value={event.weeklySermon}
+              placeholder="Weekly Sermon"
+            />
+          </Form.Field>
+
+          <Form.Field>
+            <label>Sermon By:</label>
+            <input
+              name="sermonBy"
+              onChange={this.onInputChange}
+              value={event.sermonBy}
+              placeholder="Pastor/Preacher Name"
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>Date</label>
+            <input
+              name="date"
+              type="date"
+              onChange={this.onInputChange}
+              value={event.date}
+              placeholder="Select the date"
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>Series</label>
+            <input
+              name="series"
+              onChange={this.onInputChange}
+              value={event.series}
+              placeholder="Sermon series"
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>Description</label>
+            <textarea
+              name="description"
+              onChange={this.onInputChange}
+              value={event.description}
+              placeholder="Decription of the Message"
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>Video Upload</label>
+            <input
+              name="video"
+              onChange={this.onInputChange}
+              value={event.video}
+              placeholder="Upload Video"
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>Upload Audio</label>
+            <input
+              name="audio"
+              onChange={this.onInputChange}
+              value={event.audio}
+              type="file"
+              placeholder="Upload audio"
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>Upload Notes</label>
+            <input
+              name="notes"
+              onChange={this.onInputChange}
+              value={event.notes}
+              placeholder="Upload notes"
+            />
+          </Form.Field>
+          <Button primary type="submit">
+            Submit
+          </Button>
+          <Button onClick={handleCancel} type="button">
+            Cancel
+          </Button>
+        </Form>
+      </Segment>
     );
   }
 }

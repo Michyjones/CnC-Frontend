@@ -83,16 +83,18 @@ export const Wrapper = styled.div`
   background: #f5f7fc 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 20px #00000029;
   border-radius: 30px;
-  min-height: 550px;
+  min-height: 500px;
   padding-top: 30px;
   padding-left: 30px;
+  padding-right: 20px;
 `;
 
 export const MenuCard = styled.div`
+  display: flex;
   text-align: left;
   justify-content: left;
-  display: flex;
   font: normal normal normal 20px/20px Montserrat;
+ 
 `;
 
 export const MenuItem = styled.div`
@@ -101,7 +103,6 @@ export const MenuItem = styled.div`
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   cursor: pointer;
-  ${breakpoints('display', [{ 500: 'none' }])};
   &:hover {
     color: #bf00ff;
     padding-left: 3em;
@@ -109,6 +110,20 @@ export const MenuItem = styled.div`
     > a {
       color: #fff;
     }
+  }
+  @media screen and (max-width: 120px) {
+    font-size: 0.4rem;
+    margin: 4px 0;
+  }
+  @media screen and (max-width: 80px) {
+    font-size: 0.2rem;
+  }
+  @media screen and (max-width: 60px) {
+    font-size: 0.1rem;
+    margin: 2px 0;
+  }
+  @media screen and (max-width: 45px) {
+    font-size: 1rem;
   }
 `;
 
