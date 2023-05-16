@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Grid, Button } from 'semantic-ui-react';
 import debounce from 'lodash.debounce';
-import SearchBar from '../Search/SearchBar';
+// import SearchBar from '../Search/SearchBar';
 import VideoDetail from '../Search/VideoDetail';
 import VideoList from '../Search/VideoList';
 import YTSearch from 'youtube-api-search';
@@ -17,6 +17,10 @@ import {
 const channelId = process.env.REACT_APP_CHANNEL_ID;
 const API_KEY = process.env.REACT_APP_API_KEY;
 const result = 10;
+
+//display data from aws
+
+
 
 const googleUrl = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${result}`;
 
@@ -59,10 +63,12 @@ class Messages extends Component {
     );
   }
 
+
   render() {
-    const videoSearch = debounce((term) => {
-      this.videoSearch(term);
-    }, 300);
+    // const videoSearch = debounce((term) => {
+    //   this.videoSearch(term);
+    // }, 300);
+    
     return (
       <>
         <Container className="main">
@@ -77,6 +83,7 @@ class Messages extends Component {
                 color="purple"
                 content="Get All Messages"
               />
+              
               <FrameMargin>
                 {this.state.resultyt.map((link, i) => {
                   const frame = (
@@ -96,12 +103,11 @@ class Messages extends Component {
                 })}
                 {this.frame}
               </FrameMargin>
-
               <PaginationMessages />
             </Grid.Column>
             <GridWrapper>
               <Grid.Column width={6}>
-                <SearchBar onSearchTermChange={videoSearch} />
+                {/* <SearchBar onSearchTermChange={videoSearch} /> */}
                 <VideoDetail video={this.state.selectedVideo} />
                 <VideoList
                   videos={this.state.videos}
