@@ -20,7 +20,6 @@ class EventListItem extends Component {
   render() {
     const { event, onOpen, deleteEvent } = this.props;
     return (
-      <Segment>
       <Container>
       <Wrapper>
         <Item.Group>
@@ -78,7 +77,6 @@ class EventListItem extends Component {
         />
       </Wrapper>
       </Container>
-      </Segment>
     );
   }
 }
